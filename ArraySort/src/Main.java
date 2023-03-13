@@ -18,9 +18,16 @@ public class Main {
 		}
 		
 		System.out.println(arrToString(arr));
+		BubbleSortIntegers.sort(arr);
+		System.out.println(arrToString(arr));
 	
 	}
 	
+	/**
+	 * 
+	 * @param arr
+	 * @return
+	 */
 	public static String arrToString(int[] arr) {
 		String reString = "";
 		reString += "[";
@@ -30,5 +37,7 @@ public class Main {
 		reString += "]";
 		return reString;
 	}
+	
+	
 	
 }
