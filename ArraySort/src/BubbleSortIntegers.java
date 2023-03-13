@@ -1,7 +1,7 @@
 
 /**
  * @author Yuting
- *
+ * This class 
  */
 public final class BubbleSortIntegers {
 	
