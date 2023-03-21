@@ -5,6 +5,8 @@
  */
 public class BinaryLinkedTree{
 	
+	private BinaryTreeNode<?> root;
+	
 	
 	
 	
