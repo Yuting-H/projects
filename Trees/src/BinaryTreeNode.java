@@ -34,4 +34,47 @@ public class BinaryTreeNode<T> {
 		
 	}
 	
+	/**
+	 * @return the data
+	 */
+	public T getData() {
+		return data;
+	}
+	
+	/**
+	 * @return the leftChild
+	 */
+	public BinaryTreeNode<T> getLeftChild() {
+		return leftChild;
+	}
+	
+	/**
+	 * @return the rightChild
+	 */
+	public BinaryTreeNode<T> getRightChild() {
+		return rightChild;
+	}
+	
+	/**
+	 * @param data the data to set
+	 */
+	public void setData(T data) {
+		this.data = data;
+	}
+	
+	/**
+	 * @param leftChild the leftChild to set
+	 */
+	public void setLeftChild(BinaryTreeNode<T> leftChild) {
+		this.leftChild = leftChild;
+	}
+	
+	/**
+	 * @param rightChild the rightChild to set
+	 */
+	public void setRightChild(BinaryTreeNode<T> rightChild) {
+		this.rightChild = rightChild;
+	}
+	
+	
 }
