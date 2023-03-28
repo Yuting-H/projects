@@ -35,6 +35,20 @@ public class BinaryTreeNode<T> {
 	}
 	
 	/**
+	 * 
+	 */
+	public boolean hasChild() {
+		
+		if (this.leftChild != null || this.rightChild != null) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
+	
+	
+	/**
 	 * @return the data
 	 */
 	public T getData() {
