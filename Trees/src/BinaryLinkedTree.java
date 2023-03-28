@@ -34,6 +34,7 @@ public class BinaryLinkedTree<T>{
 			root = new BinaryTreeNode<T>(data);
 			this.root = root;
 		}else {
+			
 			Queue<BinaryTreeNode<T>> q = new LinkedList<BinaryTreeNode<T>>();
 			
 			q.add(root);
@@ -49,7 +50,12 @@ public class BinaryLinkedTree<T>{
 					curr.setRightChild(new BinaryTreeNode<T>(data));
 					return;
 				}else {
-					q.add(curr);
+					if (curr.hasLeftChild()) {
+						q.add(curr.getLeftChild());
+					}
+					if (curr.hasRightChild()) {
+						q.add(curr.getRightChild());
+					}
 				}
 			}
 		}
