@@ -7,27 +7,37 @@ import java.util.Queue;
  */
 public class BinaryLinkedTree<T>{
 	
+	/** The root of the tree*/
 	private BinaryTreeNode<T> root;
 	
 	
 	/**
-	 * 
+	 * Creates a new tree with a null root
 	 */
 	public BinaryLinkedTree() {
 		this.root = null;
 	}
 	
 	/**
-	 * 
+	 * Creates a new tree with a root
 	 */
-	public BinaryLinkedTree(BinaryTreeNode root) {
+	public BinaryLinkedTree(BinaryTreeNode<T> root) {
 		this.root = root;
 	}
 	
+	/**
+	 * Wrapper method for adding data to the tree
+	 * @param data
+	 */
 	public void add(T data) {
 		add(data, this.root);
 	}
 	
+	/**
+	 * adds the data to the tree
+	 * @param data
+	 * @param root
+	 */
 	public void add(T data, BinaryTreeNode<T> root) {
 		
 		if (root == null) {
@@ -65,13 +75,19 @@ public class BinaryLinkedTree<T>{
 	}
 	
 	/**
-	 * wrapper method
+	 * wrapper method to print the tree
 	 */
 	public void printTree() {
 		printTree(this.root);
 	}
 	
+	/**
+	 * Prints the tree
+	 * @param root
+	 */
 	public void printTree(BinaryTreeNode<T> root) {
+		
+		System.out.print("[ ");
 		
 		Queue<BinaryTreeNode<T>> q = new LinkedList<>();
 		
@@ -81,19 +97,19 @@ public class BinaryLinkedTree<T>{
 			
 			BinaryTreeNode<T> curr = q.poll();
 			
-			if (!curr.hasChild()) {
-				System.out.println(curr.getData().toString() + ' ');
-			}
+			System.out.print(curr.getData().toString() + ' ');
 			
-			if (curr.getLeftChild() != null) {
+			if (curr.hasLeftChild()) {
 				q.add(curr.getLeftChild());
 			}
 			
-			if (curr.getRightChild() != null) {
+			if (curr.hasRightChild()) {
 				q.add(curr.getRightChild());
 			}
 			
 		}
+		
+		System.out.println("]");
 		
 	}
 	
