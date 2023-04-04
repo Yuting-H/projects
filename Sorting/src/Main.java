@@ -1,4 +1,3 @@
-import java.util.Random;
 
 /**
  * @author Yuting
@@ -9,35 +8,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int[] arr = new int[10];
+		int[] arr = Array.NewRandomArray(10);
 		
-		Random rand = new Random();
 		
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = (int) (rand.nextDouble()*100);
-		}
-		
-		System.out.println(arrToString(arr));
-		BubbleSortIntegers.sort(arr);
-		System.out.println(arrToString(arr));
-	
 	}
-	
-	/**
-	 * 
-	 * @param arr
-	 * @return
-	 */
-	public static String arrToString(int[] arr) {
-		String reString = "";
-		reString += "[";
-		for (int i = 0; i < arr.length; i++) {
-			reString += arr[i] + " ";
-		}
-		reString += "]";
-		return reString;
-	}
-	
-	
 	
 }
