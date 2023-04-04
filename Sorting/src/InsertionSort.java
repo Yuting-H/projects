@@ -12,6 +12,10 @@ public class InsertionSort {
 		
 	}
 	
+	public static void stackSort() {
+		
+	}
+	
 	
 	
 }
