@@ -25,6 +25,10 @@ public class BinaryLinkedTree<T>{
 		this.root = root;
 	}
 	
+	public BinaryLinkedTree(T data) {
+		this.root = new BinaryTreeNode<>(data);
+	}
+	
 	/**
 	 * Wrapper method for adding data to the tree
 	 * @param data

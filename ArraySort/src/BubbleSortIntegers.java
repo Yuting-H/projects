@@ -2,7 +2,7 @@
 /**
  * @author Yuting This class
  */
-public class BubbleSortIntegers {
+public class BubbleSortIntegers{
 
 	/**
 	 * Sort the array in ascending order
