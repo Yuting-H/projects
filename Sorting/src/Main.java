@@ -10,6 +10,11 @@ public class Main {
 		
 		int[] arr = Array.NewRandomArray(10);
 		
+		Array.printArray(arr);
+		
+		InsertionSort.stackSort(arr);
+		
+		Array.printArray(arr);
 		
 	}
 	
