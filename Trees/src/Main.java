@@ -21,7 +21,7 @@ public class Main {
 		tree.add(5);
 		tree.add(6);
 		
-		tree.printTree();
+		tree.printPreOrder();
 		
 		
 	}

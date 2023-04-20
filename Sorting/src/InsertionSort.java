@@ -18,10 +18,7 @@ public class InsertionSort {
 		//for all 
 		for (int i = 0; i < arr.length - 2; i++) {
 			
-			//find the insertion index
-			for (int j = i; j < arr.length; j++) {
-				
-			}
+			
 
 		}
 
@@ -47,8 +44,10 @@ public class InsertionSort {
 			//for all the element in this array
 			for (int i = 1; i < arr.length; i++) {
 				
-				//if the top element is smaller than the current element
+				//if the top element of sorted is smaller than the current element
 				while (!(sorted.isEmpty()) && sorted.peek() < arr[i]) {
+					
+					//pops the smaller element and push it into temp
 					temp.push(sorted.pop());
 				}
 				
