@@ -50,7 +50,7 @@ public class BinaryLinkedTree<T> {
 		if (root == null) {
 			root = new BinaryTreeNode<T>(data);
 			this.root = root;
-		} else {
+		} else { 	//uses level order traversal
 
 			// create a new queue
 			Queue<BinaryTreeNode<T>> q = new LinkedList<BinaryTreeNode<T>>();
@@ -89,7 +89,10 @@ public class BinaryLinkedTree<T> {
 	}
 	
 	public void printPreOrder() {
+		
+		System.out.print("[ ");
 		printPreOrder(this.root);
+		System.out.println("]");
 	}
 
 	/**
@@ -125,13 +128,13 @@ public class BinaryLinkedTree<T> {
 	
 	public void printPreOrder(BinaryTreeNode<T> root) {
 		
-		System.out.print("[ ");
-		
 		if (root != null) {
 			System.out.print( root.getData().toString() + " ");
 			
 			printPreOrder(root.getLeftChild());
 			printPreOrder(root.getRightChild());
+		}else {
+			return;
 		}
 		
 	}
