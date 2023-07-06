@@ -2,7 +2,7 @@ import java.util.Stack;
 
 /**
  * @author Yuting
- *
+ * This 
  */
 public class InsertionSort {
 
@@ -11,13 +11,25 @@ public class InsertionSort {
 	 */
 	public static void inPlaceSort(int[] arr) {
 		
+		// return if the array is already sorted
 		if (arr.length < 2) {
 			return;
 		}
 
-		//for all 
+		int temp;
+
+		//for all but the last element in array
 		for (int i = 0; i < arr.length - 2; i++) {
 			
+			//compare each i and i+1 
+			for (int j = i; j > 0; j--) {
+				if (arr[i] > arr[i+1]) {
+					temp = arr[i];
+					arr[i] = arr[i+1]
+					arr[i+1] = temp;
+					
+				}
+			}
 			
 
 		}
@@ -25,15 +37,16 @@ public class InsertionSort {
 	}
 
 	/**
-	 * Intsertion sort using stacks
+	 * Insertion sort using stacks
 	 * @param arr
 	 */
 	public static void stackSort(int[] arr) {
 		
+		//return if the array is already sorted
 		if (arr.length < 2) {
 			return;
 		}
-		
+		// creates new temp and sorted stack
 		Stack<Integer> temp = new Stack<>();
 		
 		Stack<Integer> sorted = new Stack<>();
