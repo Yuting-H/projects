@@ -25,6 +25,10 @@ public class BinaryLinkedTree<T> {
 		this.root = root;
 	}
 
+	/**
+	 * Creates a bew tree with data saved in the tree's root
+	 * @param data the data saved in the tree's root
+	 */
 	public BinaryLinkedTree(T data) {
 		this.root = new BinaryTreeNode<>(data);
 	}
