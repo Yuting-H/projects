@@ -11,7 +11,7 @@ public class InsertionSort {
 	 */
 	public static void inPlaceSort(int[] arr) {
 		
-		// return if the array is already sorted
+		// return if the array length is less than 2
 		if (arr.length < 2) {
 			return;
 		}
