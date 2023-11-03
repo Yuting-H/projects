@@ -9,7 +9,7 @@ import java.util.Queue;
 public class BinaryTree {
 
 	/** The root of the tree */
-	private BinaryTreeNode root;
+	protected BinaryTreeNode root;
 
 	/**
 	 * Creates a new tree with a null root
