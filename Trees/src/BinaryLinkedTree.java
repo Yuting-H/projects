@@ -3,13 +3,13 @@ import java.util.Queue;
 
 /**
  * @author Yuting
- * @param <T>
+ * @param 
  *
  */
-public class BinaryLinkedTree<T> {
+public class BinaryLinkedTree {
 
 	/** The root of the tree */
-	private BinaryTreeNode<T> root;
+	private BinaryTreeNode root;
 
 	/**
 	 * Creates a new tree with a null root
@@ -21,7 +21,7 @@ public class BinaryLinkedTree<T> {
 	/**
 	 * Creates a new tree with a root
 	 */
-	public BinaryLinkedTree(BinaryTreeNode<T> root) {
+	public BinaryLinkedTree(BinaryTreeNode root) {
 		this.root = root;
 	}
 
@@ -29,8 +29,8 @@ public class BinaryLinkedTree<T> {
 	 * Creates a bew tree with data saved in the tree's root
 	 * @param data the data saved in the tree's root
 	 */
-	public BinaryLinkedTree(T data) {
-		this.root = new BinaryTreeNode<>(data);
+	public BinaryLinkedTree(int data) {
+		this.root = new BinaryTreeNode(data);
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class BinaryLinkedTree<T> {
 	 * 
 	 * @param data
 	 */
-	public void add(T data) {
+	public void add(int data) {
 		add(data, this.root);
 	}
 
@@ -48,29 +48,29 @@ public class BinaryLinkedTree<T> {
 	 * @param data
 	 * @param root
 	 */
-	public void add(T data, BinaryTreeNode<T> root) {
+	public void add(int data, BinaryTreeNode root) {
 
 		// add to the root of the tree if the tree's node is null
 		if (root == null) {
-			root = new BinaryTreeNode<T>(data);
+			root = new BinaryTreeNode(data);
 			this.root = root;
 		} else { 	//uses level order traversal
 
 			// create a new queue
-			Queue<BinaryTreeNode<T>> q = new LinkedList<BinaryTreeNode<T>>();
+			Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
 
 			// add the root to the queue
 			q.add(root);
 
 			while (!q.isEmpty()) {
 
-				BinaryTreeNode<T> curr = q.poll();
+				BinaryTreeNode curr = q.poll();
 
 				if (curr.getLeftChild() == null) {
-					curr.setLeftChild(new BinaryTreeNode<T>(data));
+					curr.setLeftChild(new BinaryTreeNode(data));
 					return;
 				} else if (curr.getRightChild() == null) {
-					curr.setRightChild(new BinaryTreeNode<T>(data));
+					curr.setRightChild(new BinaryTreeNode(data));
 					return;
 				} else {
 					if (curr.hasLeftChild()) {
@@ -104,17 +104,17 @@ public class BinaryLinkedTree<T> {
 	 * 
 	 * @param root
 	 */
-	public void printLevelOrder(BinaryTreeNode<T> root) {
+	public void printLevelOrder(BinaryTreeNode root) {
 
 		System.out.print("[ ");
 
-		Queue<BinaryTreeNode<T>> q = new LinkedList<>();
+		Queue<BinaryTreeNode> q = new LinkedList<>();
 
 		q.add(root);
 
 		while (!q.isEmpty()) {
 
-			BinaryTreeNode<T> curr = q.poll();
+			BinaryTreeNode curr = q.poll();
 
 			System.out.print(curr.getData().toString() + ' ');
 
@@ -130,7 +130,7 @@ public class BinaryLinkedTree<T> {
 		System.out.println("]");
 	}
 	
-	public void printPreOrder(BinaryTreeNode<T> root) {
+	public void printPreOrder(BinaryTreeNode root) {
 		
 		if (root != null) {
 			System.out.print( root.getData().toString() + " ");

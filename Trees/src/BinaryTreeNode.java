@@ -3,20 +3,20 @@
  * @author Yuting
  *
  */
-public class BinaryTreeNode<T> {
+public class BinaryTreeNode {
 
-	private T data;
+	private int data;
 	
-	private BinaryTreeNode<T> rightChild;
+	private BinaryTreeNode rightChild;
 	
-	private BinaryTreeNode<T> leftChild;
+	private BinaryTreeNode leftChild;
 	
 	/**
 	 * 
 	 */
 	public BinaryTreeNode() {
 		
-		this.data = null;
+		this.data = 0;
 		
 		this.rightChild = null;
 		
@@ -24,7 +24,7 @@ public class BinaryTreeNode<T> {
 		
 	}
 	
-	public BinaryTreeNode (T data){
+	public BinaryTreeNode (int data){
 		
 		this.data = data;
 		
@@ -68,42 +68,42 @@ public class BinaryTreeNode<T> {
 	/**
 	 * @return the data
 	 */
-	public T getData() {
+	public int getData() {
 		return data;
 	}
 	
 	/**
 	 * @return the leftChild
 	 */
-	public BinaryTreeNode<T> getLeftChild() {
+	public BinaryTreeNode getLeftChild() {
 		return leftChild;
 	}
 	
 	/**
 	 * @return the rightChild
 	 */
-	public BinaryTreeNode<T> getRightChild() {
+	public BinaryTreeNode getRightChild() {
 		return rightChild;
 	}
 	
 	/**
 	 * @param data the data to set
 	 */
-	public void setData(T data) {
+	public void setData(int data) {
 		this.data = data;
 	}
 	
 	/**
 	 * @param leftChild the leftChild to set
 	 */
-	public void setLeftChild(BinaryTreeNode<T> leftChild) {
+	public void setLeftChild(BinaryTreeNode leftChild) {
 		this.leftChild = leftChild;
 	}
 	
 	/**
 	 * @param rightChild the rightChild to set
 	 */
-	public void setRightChild(BinaryTreeNode<T> rightChild) {
+	public void setRightChild(BinaryTreeNode rightChild) {
 		this.rightChild = rightChild;
 	}
 	
