@@ -12,7 +12,7 @@ public class Main {
 
 		
 		
-		BinaryLinkedTree<Integer> tree = new BinaryLinkedTree<>();
+		BinaryTree tree = new BinaryTree();
 		
 		tree.add(1, null);
 		tree.add(2);

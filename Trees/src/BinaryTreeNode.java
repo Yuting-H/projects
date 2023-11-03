@@ -6,6 +6,8 @@
 public class BinaryTreeNode {
 
 	private int data;
+
+	private BinaryTreeNode parent;
 	
 	private BinaryTreeNode rightChild;
 	
@@ -72,6 +74,10 @@ public class BinaryTreeNode {
 		return data;
 	}
 	
+	public BinaryTreeNode getParent() {
+		return parent;
+	}
+
 	/**
 	 * @return the leftChild
 	 */
@@ -91,6 +97,10 @@ public class BinaryTreeNode {
 	 */
 	public void setData(int data) {
 		this.data = data;
+	}
+
+	public void setParent(BinaryTreeNode parent) {
+		this.parent = parent;
 	}
 	
 	/**

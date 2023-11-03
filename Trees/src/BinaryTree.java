@@ -6,7 +6,7 @@ import java.util.Queue;
  * @param 
  *
  */
-public class BinaryLinkedTree {
+public class BinaryTree {
 
 	/** The root of the tree */
 	private BinaryTreeNode root;
@@ -14,14 +14,14 @@ public class BinaryLinkedTree {
 	/**
 	 * Creates a new tree with a null root
 	 */
-	public BinaryLinkedTree() {
+	public BinaryTree() {
 		this.root = null;
 	}
 
 	/**
 	 * Creates a new tree with a root
 	 */
-	public BinaryLinkedTree(BinaryTreeNode root) {
+	public BinaryTree(BinaryTreeNode root) {
 		this.root = root;
 	}
 
@@ -29,7 +29,7 @@ public class BinaryLinkedTree {
 	 * Creates a bew tree with data saved in the tree's root
 	 * @param data the data saved in the tree's root
 	 */
-	public BinaryLinkedTree(int data) {
+	public BinaryTree(int data) {
 		this.root = new BinaryTreeNode(data);
 	}
 
@@ -116,7 +116,7 @@ public class BinaryLinkedTree {
 
 			BinaryTreeNode curr = q.poll();
 
-			System.out.print(curr.getData().toString() + ' ');
+			System.out.printf(" %d",curr.getData());
 
 			if (curr.hasLeftChild()) {
 				q.add(curr.getLeftChild());
@@ -133,7 +133,7 @@ public class BinaryLinkedTree {
 	public void printPreOrder(BinaryTreeNode root) {
 		
 		if (root != null) {
-			System.out.print( root.getData().toString() + " ");
+			System.out.printf( " %d", root);
 			
 			printPreOrder(root.getLeftChild());
 			printPreOrder(root.getRightChild());

@@ -4,7 +4,7 @@
  * @param <T>
  *
  */
-public class BinarySearchTree<T> extends BinaryLinkedTree<T>{
+public class BinarySearchTree extends BinaryTree{
 
 	/**
 	 * 
@@ -15,13 +15,13 @@ public class BinarySearchTree<T> extends BinaryLinkedTree<T>{
 		
 	}
 	
-	public BinarySearchTree(T data) {
+	public BinarySearchTree(int data) {
 	
 		super(data);
 		
 	}
 	
-	public void add(T data) {
+	public void add(int data) {
 	
 		
 	}
