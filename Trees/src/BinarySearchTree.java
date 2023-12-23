@@ -22,7 +22,7 @@ public class BinarySearchTree extends BinaryTree{
 	}
 	
 	public void add(int data) {
-		
+		 
 		recursiveAdd(super.root, data);
 		
 	}
